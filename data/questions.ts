@@ -3,7 +3,7 @@ import { Question } from '../types';
 export const quizQuestions: Question[] = [
   {
     id: 1,
-    question: "Quem é o autor do poema 'Da hora de pôr a mesa, éramos cinco'?",
+    question: "Quem é o autor do poema 'À hora de pôr a mesa, éramos cinco'?",
     timeLimit: 20,
     options: [
       { id: 'a', text: "José Saramago", isCorrect: false },
@@ -69,13 +69,13 @@ export const quizQuestions: Question[] = [
   },
   {
     id: 7,
-    question: "Qual é a figura familiar cuja ausência é central no poema?",
+    question: "Qual elemento do poema simboliza a união familiar, mesmo perante a ausência?",
     timeLimit: 20,
     options: [
-      { id: 'a', text: "O Pai", isCorrect: true },
-      { id: 'b', text: "A Mãe", isCorrect: false },
-      { id: 'c', text: "Um Irmão", isCorrect: false },
-      { id: 'd', text: "O Avô", isCorrect: false }
+      { id: 'a', text: "A Mesa", isCorrect: true },
+      { id: 'b', text: "A Janela", isCorrect: false },
+      { id: 'c', text: "O Relógio", isCorrect: false },
+      { id: 'd', text: "A Porta", isCorrect: false }
     ]
   },
   {
@@ -87,6 +87,39 @@ export const quizQuestions: Question[] = [
       { id: 'b', text: "A permanência da memória apesar da morte", isCorrect: true },
       { id: 'c', text: "Um erro de contagem", isCorrect: false },
       { id: 'd', text: "A visita de vizinhos", isCorrect: false }
+    ]
+  },
+  {
+    id: 9,
+    question: "Que recurso expressivo é evidente no verso 'éramos cinco, somos cinco'?",
+    timeLimit: 20,
+    options: [
+      { id: 'a', text: "Antítese", isCorrect: true },
+      { id: 'b', text: "Anáfora", isCorrect: false },
+      { id: 'c', text: "Metáfora", isCorrect: false },
+      { id: 'd', text: "Personificação", isCorrect: false }
+    ]
+  },
+  {
+    id: 10,
+    question: "A quem é dirigido o poema quando o sujeito diz 'o teu lugar'?",
+    timeLimit: 20,
+    options: [
+      { id: 'a', text: "Ao pai falecido", isCorrect: true },
+      { id: 'b', text: "À mãe", isCorrect: false },
+      { id: 'c', text: "A um irmão ausente", isCorrect: false },
+      { id: 'd', text: "Ao próprio poeta", isCorrect: false }
+    ]
+  },
+  {
+    id: 11,
+    question: "Qual é o tom emocional predominante no poema?",
+    timeLimit: 20,
+    options: [
+      { id: 'a', text: "Melancolia e Saudade", isCorrect: true },
+      { id: 'b', text: "Alegria e Euforia", isCorrect: false },
+      { id: 'c', text: "Raiva e Revolta", isCorrect: false },
+      { id: 'd', text: "Indiferença e Frieza", isCorrect: false }
     ]
   }
 ];
