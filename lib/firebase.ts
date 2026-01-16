@@ -5,7 +5,7 @@ import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
     apiKey: "AIzaSyAyC0wDDFW81Ldqq7F07OlygB1V1mSNCKI",
     authDomain: "kahoot-67bc4.firebaseapp.com",
-    databaseURL: "https://kahoot-67bc4-default-rtdb.firebaseio.com",
+    databaseURL: "https://kahoot-67bc4-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "kahoot-67bc4",
     storageBucket: "kahoot-67bc4.firebasestorage.app",
     messagingSenderId: "47313021693",
