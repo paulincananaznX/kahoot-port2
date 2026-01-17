@@ -130,6 +130,13 @@ export default function GamePage() {
                     </div>
                 )}
 
+                {gameState === 'get_ready' && (
+                    <div className="text-center animate-bounce">
+                        <h2 className="text-4xl font-bold mb-2 text-yellow-400">Get Ready!</h2>
+                        <p className="text-indigo-200 text-xl">Look at the host screen...</p>
+                    </div>
+                )}
+
                 {gameState === 'question' && !hasAnswered && (
                     <div className="grid grid-cols-1 gap-4">
                         <div className="mb-4 p-4 bg-white/5 rounded-lg text-center">

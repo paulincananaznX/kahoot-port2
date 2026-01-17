@@ -138,6 +138,17 @@ export default function HostPage() {
                     </div>
                 )}
 
+                {gameState === 'get_ready' && (
+                    <div className="text-center animate-pulse">
+                        <h2 className="text-6xl font-bold text-yellow-400 mb-8">GET READY</h2>
+                        <div className="bg-white/10 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+                            <p className="text-3xl md:text-4xl font-semibold leading-tight">
+                                {quizQuestions[currentQuestionIdx].question}
+                            </p>
+                        </div>
+                    </div>
+                )}
+
                 {gameState === 'question' && (
                     <div className="w-full max-w-4xl space-y-8">
                         <div className="text-center mb-8">
@@ -161,8 +172,7 @@ export default function HostPage() {
                             {quizQuestions[currentQuestionIdx].options.map((opt) => (
                                 <div
                                     key={opt.id}
-                                    className={`p-6 rounded-xl text-xl font-medium border-2 
-                     ${opt.isCorrect ? 'border-green-500 bg-green-500/20' : 'border-gray-600 bg-gray-800'}`}
+                                    className={`p-6 rounded-xl text-xl font-medium border-2 border-gray-600 bg-gray-800`}
                                 >
                                     {opt.text}
                                 </div>

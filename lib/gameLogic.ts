@@ -12,10 +12,12 @@ export const calculateScore = (
     totalTime: number,
     baseScore: number = 1000
 ): number => {
-    // Formula: P = B * (1 - (t / T) * 0.5)
-    // Ensures minimum score is 50% of base if answered at the very last second
-    const score = baseScore * (1 - (timeElapsed / totalTime) * 0.5);
-    return Math.round(Math.max(0, score));
+    // Formula: Max 1000, decays 25 pts per second.
+    // Minimum 500 (if answered within time limit).
+    // If incorrect, score is handled by caller (0).
+    const decay = 25;
+    const score = baseScore - (timeElapsed * decay);
+    return Math.round(Math.max(500, score));
 };
 
 export type Player = {
@@ -25,7 +27,7 @@ export type Player = {
     answers: Record<number, number>; // questionIndex -> answerIndex
 };
 
-export type GameState = "waiting" | "playing" | "leaderboard" | "finished";
+export type GameState = "waiting" | "get_ready" | "question" | "leaderboard" | "finished";
 
 export type Room = {
     id: string;
